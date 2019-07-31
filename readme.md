@@ -4,3 +4,10 @@
 2. composer update
 3. cp env.example .env
 4. php artisan key:generate.
+
+After connection to DB in .env you need to run command:
+php artisan migrate --seed.
+
+Test account:
+login: test.user@gmail.com
+password: pass123
