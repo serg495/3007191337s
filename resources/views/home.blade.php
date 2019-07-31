@@ -87,25 +87,6 @@
                                         <li><a href="#" class="logout">Log Out</a></li>
                                     </ul>
                                 </nav>
-
-                                <!--
-                                    <nav class="utnav">
-                                        <ul>
-                                            <li><a href="#">Menu</a></li>
-                                            <li><a href="#">Orders</a></li>
-                                            <li><a href="#">Reviews</a></li>
-                                            <li><a href="#">Account Settings</a></li>
-                                            <li><a href="#">Profile Settings</a></li>
-                                            <li class="sepor"></li>
-                                            <li><a href="#">Subway</a></li>
-                                            <li><a href="#">McDonalds</a></li>
-                                            <li class="sepor"></li>
-                                            <li><a href="#"><span class="bplus"></span> Add Restaurant</a></li>
-                                            <li class="sepor"></li>
-                                            <li><a href="#" class="logout">Log Out</a></li>
-                                        </ul>
-                                    </nav>
-                                 -->
                             </div>
                         </div>
                     </div>
@@ -163,7 +144,7 @@
                                 <h2>Add New Address</h2>
                                 @if (session('status'))
                                     <div class="alert alert-success">
-                                        {{ session('status') }}
+                                        <h2 style="color: green;">{{ session('status') }}</h2>
                                     </div>
                                 @endif
                                 <form action="{{ route('address.store') }}" method="POST">
@@ -207,7 +188,7 @@
                                         <div class="alert alert-danger">
                                             <ul>
                                                 @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
+                                                    <li style="color: red">{{ $error }}</li>
                                                 @endforeach
                                             </ul>
                                         </div>
